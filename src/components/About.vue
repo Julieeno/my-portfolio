@@ -1,8 +1,5 @@
 <template>
   <section id="about" class="section-container">
-    <h2 class="section-title">
-      {{ t('sections.about.heading') }}
-    </h2>
     <div class="section-content">
       <p class="text-gray-700 dark:text-gray-300">
         {{ t('sections.about.content') }}

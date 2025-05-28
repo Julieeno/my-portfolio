@@ -1,8 +1,5 @@
 <template>
   <section id="experience" class="section-container">
-    <h2 class="section-title">
-      {{ t('sections.experience.heading') }}
-    </h2>
     <div class="space-y-6">
       <div v-for="(item, key) in experienceItems" :key="key"
         :class="{'highlight-match': searchActive && isItemMatched(item)}"

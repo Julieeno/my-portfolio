@@ -1,8 +1,5 @@
 <template>
   <section id="education" class="section-container">
-    <h2 class="section-title">
-      {{ t('sections.education.heading') }}
-    </h2>
     <div class="space-y-6">
       <div v-for="(item, key) in educationItems" :key="key"
         :class="{'highlight-match': searchActive && isItemMatched(item)}"

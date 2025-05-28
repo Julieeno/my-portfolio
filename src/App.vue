@@ -53,7 +53,7 @@
                 type="text"
                 v-model="searchQuery"
                 :placeholder="t('searchPlaceholder')"
-                class="input w-full"
+                class="input w-64"
             />
           </div>
 
@@ -99,7 +99,7 @@
                         type="text"
                         v-model="searchQuery"
                         :placeholder="t('searchPlaceholder')"
-                        class="input w-full"
+                        class="input w-64"
                     />
                   </div>
 
@@ -542,13 +542,11 @@ html, body {
 }
 
 .nav-link {
-  @apply dark:text-sage-300
-  hover:bg-sage-100 dark:hover:bg-sage-800 transition-colors;
+  @apply dark:text-sage-300 transition-colors;
 }
 
 .nav-link.active {
-  @apply text-sage-900 dark:text-sage-50
-  font-medium;
+  @apply text-sage-900 dark:text-sage-50 font-medium;
 }
 
 .contact-icon {

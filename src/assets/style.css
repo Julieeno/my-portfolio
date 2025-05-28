@@ -22,11 +22,44 @@
   }
   
   .nav-link {
-    @apply block text-sage-600 dark:text-sage-400 hover:underline transition-colors duration-200 hover:text-sage-800 dark:hover:text-sage-300;
+    @apply block text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300 text-lg;
+    @apply transition-all duration-300 ease-out relative;
+    margin-left: 80px;
+  }
+
+  .nav-link::before {
+    content: '';
+    @apply absolute top-1/2 -translate-y-1/2;
+    @apply bg-sage-600 dark:bg-sage-400;
+    @apply transition-all duration-300 ease-out;
+    height: 2px;
+    width: 60px;
+    left: -70px;
+  }
+
+  .nav-link:hover {
+    margin-left: 110px;
+  }
+
+  .nav-link:hover::before {
+    width: 90px;
+    @apply bg-sage-800 dark:bg-sage-300;
+    left: -100px;
+  }
+
+  .nav-link.active {
+    @apply text-sage-900 dark:text-sage-100 font-medium;
+    margin-left: 110px;
+  }
+
+  .nav-link.active::before {
+    width: 90px;
+    @apply bg-sage-900 dark:bg-sage-100;
+    left: -100px;
   }
 
   .section-container {
-    @apply bg-white dark:bg-sage-900 p-6 rounded-lg shadow-md transition border border-sage-200 dark:border-sage-800;
+    @apply p-6 rounded-lg transition;
   }
 
   .section-title {
@@ -34,7 +67,7 @@
   }
 
   .section-content {
-    @apply p-4 rounded-lg bg-sage-50 dark:bg-sage-800 shadow-sm border border-sage-200 dark:border-sage-700;
+    @apply p-4 rounded-lg;
   }
 
   .tag-pill {
