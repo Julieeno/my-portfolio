@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-sage-50 dark:bg-sage-950;
+  }
+  
+  body {
+    @apply text-sage-900 dark:text-sage-50;
+  }
+
+  a {
+    @apply text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300;
+  }
+}
+
+@layer components {
+  .nav-container {
+    @apply space-y-2 mb-8;
+  }
+  
+  .nav-link {
+    @apply block text-sage-600 dark:text-sage-400 hover:underline transition-colors duration-200 hover:text-sage-800 dark:hover:text-sage-300;
+  }
+
+  .section-container {
+    @apply bg-white dark:bg-sage-900 p-6 rounded-lg shadow-md transition border border-sage-200 dark:border-sage-800;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold text-sage-800 dark:text-sage-100 mb-6;
+  }
+
+  .section-content {
+    @apply p-4 rounded-lg bg-sage-50 dark:bg-sage-800 shadow-sm border border-sage-200 dark:border-sage-700;
+  }
+
+  .tag-pill {
+    @apply bg-sage-100 dark:bg-sage-700 text-sage-800 dark:text-sage-200 text-xs px-2 py-0.5 rounded-full;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-colors duration-200 font-medium;
+  }
+
+  .btn-primary {
+    @apply btn bg-sage-600 hover:bg-sage-700 text-white dark:bg-sage-500 dark:hover:bg-sage-600;
+  }
+
+  .btn-secondary {
+    @apply btn bg-sage-100 hover:bg-sage-200 text-sage-800 dark:bg-sage-700 dark:hover:bg-sage-600 dark:text-sage-100;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-sage-600 text-sage-600 hover:bg-sage-50 
+           dark:border-sage-400 dark:text-sage-400 dark:hover:bg-sage-800;
+  }
+
+  .input {
+    @apply px-3 py-2 rounded-lg border border-sage-300 dark:border-sage-600 
+           bg-white dark:bg-sage-800 
+           text-sage-900 dark:text-sage-100
+           focus:ring-2 focus:ring-sage-500 dark:focus:ring-sage-400 
+           focus:border-sage-500 dark:focus:border-sage-400
+           outline-none transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white dark:bg-sage-900 rounded-lg shadow-md border border-sage-200 dark:border-sage-800 p-4;
+  }
+
+  .text-primary {
+    @apply text-sage-900 dark:text-sage-50;
+  }
+
+  .text-secondary {
+    @apply text-sage-700 dark:text-sage-300;
+  }
+
+  .text-muted {
+    @apply text-sage-500 dark:text-sage-400;
+  }
+
+  .link {
+    @apply text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-200 underline;
+  }
+
+  .divider {
+    @apply border-t border-sage-200 dark:border-sage-700 my-4;
+  }
+}

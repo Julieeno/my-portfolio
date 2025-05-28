@@ -1,0 +1,75 @@
+{
+  "title": "Giuliano Lazzara",
+  "searchPlaceholder": "Search technology...",
+  "nav": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience"
+  },
+  "sections": {
+    "about": {
+      "heading": "About",
+      "content": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "skills": [
+        "JavaScript",
+        "Vue.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Python",
+        "Git"
+      ]
+    },
+    "education": {
+      "heading": "Education & Certifications",
+      "items": {
+        "certificate1": {
+          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "institution": "Lore ipsum dolor sit ",
+          "year": "2018 - 2022",
+          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tags": ["Python", "Algorithms", "Data Structures"]
+        },
+        "certificate2": {
+          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "institution": "University XYZ",
+          "year": "2018 - 2022",
+          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tags": ["Python", "Algorithms", "Data Structures"]
+        },
+        "certificate3": {
+          "title": "Lore ipsum dolor sit amet,",
+          "institution": "Lore ipsum dolor s",
+          "year": "2023",
+          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tags": ["Vue.js", "JavaScript", "Frontend"]
+        }
+      }
+    },
+    "experience": {
+      "heading": "Work Experience",
+      "items": {
+        "certificate1": {
+          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "institution": "Lore ipsum dolor sit ",
+          "year": "2018 - 2022",
+          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tags": ["Python", "Algorithms", "Data Structures"]
+        },
+        "certificate2": {
+          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "institution": "University XYZ",
+          "year": "2018 - 2022",
+          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tags": ["Python", "Algorithms", "Data Structures"]
+        },
+        "certificate3": {
+          "title": "Lore ipsum dolor sit amet,",
+          "institution": "Lore ipsum dolor s",
+          "year": "2023",
+          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
+          "tags": ["Vue.js", "JavaScript", "Frontend"]
+        }
+      }
+    }
+  }
+}
