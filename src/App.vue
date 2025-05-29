@@ -94,7 +94,7 @@
                     {{ t('title') }}
                   </h1>
 
-                  <div class="relative mb-6">
+                  <div class="relative mb-40">
                     <input
                         type="text"
                         v-model="searchQuery"
@@ -205,9 +205,6 @@ const changeLanguage = (newLocale) => {
 const searchQuery = ref('')
 const isDark = ref(document.documentElement.classList.contains('dark'))
 const currentSection = ref('about')
-
-// Removed the handleResize function since it's no longer needed
-// (it was only used for mobile menu which we don't have)
 
 const scrollToSection = (event, sectionId) => {
   event.preventDefault()

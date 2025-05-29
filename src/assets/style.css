@@ -22,7 +22,7 @@
   }
   
   .nav-link {
-    @apply block text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300 text-lg;
+    @apply block text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300 text-sm font-medium;
     @apply transition-all duration-300 ease-out relative;
     margin-left: 80px;
   }
@@ -123,4 +123,33 @@
   .divider {
     @apply border-t border-sage-200 dark:border-sage-700 my-4;
   }
+}
+
+.lightener-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 0, 0, 0.15) 0,
+    rgba(0, 0, 0, 0.1) 200px,
+    rgba(0, 0, 0, 0.05) 300px,
+    transparent 400px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+}
+
+.dark .lightener-overlay {
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.12) 200px,
+    rgba(255, 255, 255, 0.06) 300px,
+    transparent 400px
+  );
+  mix-blend-mode: soft-light;
 }

@@ -7,6 +7,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         'sage': {
           50: '#f2f4f3',
