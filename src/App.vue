@@ -176,6 +176,7 @@
 <script setup>
 import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useI18n} from 'vue-i18n'
+import {changeLanguage as i18nChangeLanguage} from './i18n/index'
 import {SunIcon, MoonIcon, ChevronDownIcon} from '@heroicons/vue/24/outline'
 import About from './components/About.vue'
 import Education from './components/Education.vue'
@@ -201,9 +202,8 @@ const languages = {
 }
 
 const changeLanguage = (newLocale) => {
-  locale.value = newLocale
+  i18nChangeLanguage(newLocale)
   isLanguageMenuOpen.value = false
-  localStorage.setItem('preferred-locale', newLocale)
 }
 
 const searchQuery = ref('')
