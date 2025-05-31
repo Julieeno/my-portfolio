@@ -45,12 +45,14 @@ const props = defineProps({
 const { t, tm } = useI18n()
 
 const educationItems = computed(() => {
-  const items = tm('sections.education.items')
-  console.log('Education items:', items) // Debug log
+  const items = tm('sections.education.items') ||
+                tm('education.items') || 
+                tm('education') || 
+                t('sections.education.items', {}, { returnObjects: true })
   
-  if (!items || typeof items !== 'object') {
-    return []
-  }
+  console.log('Education items:', items)
+  
+  if (!items) return []
   
   return Array.isArray(items) ? items : Object.values(items)
 })
