@@ -245,14 +245,14 @@ const i18n = createI18n({
 
 export const changeLanguage = (newLocale: string) => {
   if (supported_lang.includes(newLocale as any)) {
-    i18n.global.locale.value = newLocale
+    i18n.global.locale.value = newLocale as 'en' | 'es' | 'it'
     localStorage.setItem('language', newLocale)
   }
 }
 
 const savedLanguage = localStorage.getItem('language')
 if (savedLanguage && supported_lang.includes(savedLanguage as any)) {
-  i18n.global.locale.value = savedLanguage
+  i18n.global.locale.value = savedLanguage as 'en' | 'es' | 'it'
 }
 
 export default i18n
