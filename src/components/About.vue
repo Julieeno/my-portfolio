@@ -14,7 +14,12 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
-const skills = ['JavaScript', 'Vue.js', 'TypeScript', 'TailwindCSS', 'Python', 'Git']
+
+const { t, tm } = useI18n()
+
+const skills = computed(() => {
+  return tm('sections.about.skills') || []
+})
 </script>

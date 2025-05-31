@@ -2,18 +2,18 @@ import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 import './assets/style.css'
-import en from './i18n/en.json'
-import it from './i18n/it.json'
-import es from './i18n/es.json'
+import enMessages from './i18n/en.json'
+import itMessages from './i18n/it.json'
+import esMessages from './i18n/es.json'
 
 const i18n = createI18n({
   legacy: false,
   locale: 'en',
   fallbackLocale: 'en',
   messages: {
-    en,
-    it,
-    es
+    en: enMessages,
+    it: itMessages,
+    es: esMessages
   }
 })
 
