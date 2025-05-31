@@ -9,65 +9,65 @@
   "sections": {
     "about": {
       "heading": "About",
-      "content": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "content": "Computer Scientist with a strong academic background and hands-on experience in full-stack development and speech processing systems. Proficient in Python, JavaScript, and several other languages. Skilled in data structures, machine learning, and collaborative software development using GitHub.",
       "skills": [
-        "JavaScript",
-        "Vue.js",
-        "TypeScript",
-        "TailwindCSS",
         "Python",
-        "Git"
+        "JavaScript",
+        "C++",
+        "C#",
+        "Java",
+        "HTML",
+        "SQL",
+        "PHP",
+        "Docker",
+        "Machine Learning",
+        "Data Visualization",
+        "Git",
+        "PyTorch"
       ]
     },
     "education": {
       "heading": "Education & Certifications",
       "items": {
         "certificate1": {
-          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "institution": "Lore ipsum dolor sit ",
-          "year": "2018 - 2022",
-          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "tags": ["Python", "Algorithms", "Data Structures"]
+          "title": "BSc in Computer Science",
+          "institution": "[University of Catania](https://www.unict.it/en) – [Department of Mathematics and Computer Science](https://web.dmi.unict.it/en)",
+          "year": "2017 – 2022",
+          "description": "Graduated with a thesis on ['Conversational Agents and Their Impact'](https://drive.google.com/file/d/1uMQcFwMVPFX8c6jBy4ccR_y-vUxl5Ch2/view), exploring the use of AI-driven tools to address mental health issues such as depression and anxiety, and analyzing public perception and state-of-the-art technologies.",
+          "tags": ["AI", "NLP", "Computer Science"]
         },
         "certificate2": {
-          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "institution": "University XYZ",
-          "year": "2018 - 2022",
-          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "tags": ["Python", "Algorithms", "Data Structures"]
-        },
-        "certificate3": {
-          "title": "Lore ipsum dolor sit amet,",
-          "institution": "Lore ipsum dolor s",
-          "year": "2023",
-          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "tags": ["Vue.js", "JavaScript", "Frontend"]
+          "title": "Erasmus Exchange Program",
+          "institution": "[University of Groningen (Top 100 University)](https://www.rug.nl/)",
+          "year": "Jan 2020 – July 2020",
+          "description": "Studied and collaborated in an international environment, gaining experience with online course structures and advanced coursework in computer science.",
+          "tags": ["Exchange Program", "International Experience", "Computer Science"]
         }
       }
     },
     "experience": {
       "heading": "Work Experience",
       "items": {
-        "certificate1": {
-          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "institution": "Lore ipsum dolor sit ",
-          "year": "2018 - 2022",
-          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "tags": ["Python", "Algorithms", "Data Structures"]
+        "job0": {
+          "title": "Full-stack Developer and Software Engineer",
+          "company": "PPK Innovation",
+          "year": "Jan 2025 – Present",
+          "description": "Developed scalable and dynamic software solutions using a variety of programming languages and frameworks. Worked on database management, frontend/backend development, and deployment pipelines to meet client and internal business requirements.",
+          "tags": ["Full-stack", "JavaScript", "Backend", "Frontend", "Databases"]
         },
-        "certificate2": {
-          "title": "Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "institution": "University XYZ",
-          "year": "2018 - 2022",
-          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "tags": ["Python", "Algorithms", "Data Structures"]
+        "job1": {
+          "title": "Full-stack Developer and Software Engineer",
+          "company": "[Skillbill s.r.l. | Skill Matters](https://www.skillbill.it/)",
+          "year": "Mar 2023 – Present",
+          "description": "Developed scalable and dynamic software solutions using a variety of programming languages and frameworks. Worked on database management, frontend/backend development, and deployment pipelines to meet client and internal business requirements.",
+          "tags": ["Full-stack", "JavaScript", "Backend", "Frontend", "Databases"]
         },
-        "certificate3": {
-          "title": "Lore ipsum dolor sit amet,",
-          "institution": "Lore ipsum dolor s",
-          "year": "2023",
-          "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, consectetur adipiscing elit.",
-          "tags": ["Vue.js", "JavaScript", "Frontend"]
+        "job2": {
+          "title": "Internship Trainee – Speech Processing System",
+          "company": "[AUDIAS](https://audias.ii.uam.es/) at [Universidad Autónoma De Madrid](https://www.uam.es/uam/inicio)",
+          "year": "Jan 2022 – May 2022",
+          "description": "Worked on developing a speech processing system using deep learning, focusing on applying variational Bayes HMM over x-vectors for speaker diarization. Gained hands-on experience with PyTorch and machine learning pipelines.",
+          "tags": ["Speech Processing", "Deep Learning", "PyTorch", "NLP"]
         }
       }
     }

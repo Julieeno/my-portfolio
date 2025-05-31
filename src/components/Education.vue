@@ -8,10 +8,10 @@
           {{ item.title }}
         </h3>
         <p class="experience-item__meta">
-          {{ item.institution }} — {{ item.year }}
+          <span v-html="parseMarkdown(item.institution)"></span> — {{ item.year }}
         </p>
         <p class="experience-item__description">
-          {{ item.description }}
+          <span v-html="parseMarkdown(item.description)"></span>
         </p>
         <div class="tag-container">
           <span v-for="tag in item.tags" :key="tag"
@@ -47,6 +47,15 @@ const { t, tm } = useI18n()
 const educationItems = computed(() => {
   return tm('sections.education.items') || {}
 })
+
+const parseMarkdown = (text) => {
+  if (!text) return ''
+  
+  return text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g, 
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="font-bold text-sage-700 dark:text-sage-300 hover:text-sage-900 dark:hover:text-sage-100 no-underline">$1</a>'
+  )
+}
 
 const isItemMatched = (item) => {
   if (!props.searchQuery || !item) return false

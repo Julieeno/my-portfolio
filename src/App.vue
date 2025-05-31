@@ -59,7 +59,7 @@
 
           <nav class="nav-container">
             <a
-                v-for="section in ['about', 'education', 'experience']"
+                v-for="section in ['about', 'experience', 'education']"
                 :key="section"
                 :href="`#${section}`"
                 class="nav-link"
@@ -75,11 +75,11 @@
           <section id="about">
             <About/>
           </section>
-          <section id="education">
-            <Education :search-query="searchQuery" :search-active="isSearchActive" />
-          </section>
           <section id="experience">
             <Experience :search-query="searchQuery" :search-active="isSearchActive" />
+          </section>
+          <section id="education">
+            <Education :search-query="searchQuery" :search-active="isSearchActive" />
           </section>
         </main>
       </div>
@@ -105,7 +105,7 @@
 
                   <nav class="nav-container">
                     <a
-                        v-for="section in ['about', 'education', 'experience']"
+                        v-for="section in ['about', 'experience', 'education']"
                         :key="section"
                         :href="`#${section}`"
                         class="nav-link"
@@ -158,11 +158,11 @@
                 <section id="about-desktop">
                   <About/>
                 </section>
-                <section id="education-desktop">
-                  <Education :search-query="searchQuery" :search-active="isSearchActive" />
-                </section>
                 <section id="experience-desktop">
                   <Experience :search-query="searchQuery" :search-active="isSearchActive" />
+                </section>
+                <section id="education-desktop">
+                  <Education :search-query="searchQuery" :search-active="isSearchActive" />
                 </section>
               </main>
             </div>
@@ -193,7 +193,11 @@ const languages = {
   it: {
     name: 'Italiano',
     flag: 'it'
-  }
+  },
+  es: {
+    name: 'Español',
+    flag: 'es'
+  },
 }
 
 const changeLanguage = (newLocale) => {
@@ -228,7 +232,7 @@ const scrollToSection = (event, sectionId) => {
 }
 
 const updateCurrentSection = () => {
-  const sections = ['about', 'education', 'experience']
+  const sections = ['about', 'experience', 'education']
   const isMobileView = window.innerWidth < 1024
 
   for (const section of sections) {

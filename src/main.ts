@@ -4,6 +4,7 @@ import App from './App.vue'
 import './assets/style.css'
 import en from './i18n/en.json'
 import it from './i18n/it.json'
+import es from './i18n/es.json'
 
 const i18n = createI18n({
   legacy: false,
@@ -11,7 +12,8 @@ const i18n = createI18n({
   fallbackLocale: 'en',
   messages: {
     en,
-    it
+    it,
+    es
   }
 })
 
