@@ -20,6 +20,8 @@ import { useI18n } from 'vue-i18n'
 const { t, tm } = useI18n()
 
 const skills = computed(() => {
-  return tm('sections.about.skills') || []
+  const skillsData = tm('sections.about.skills')
+  console.log('Skills data:', skillsData)
+  return Array.isArray(skillsData) ? skillsData : []
 })
 </script>

@@ -45,7 +45,14 @@ const props = defineProps({
 const { t, tm } = useI18n()
 
 const educationItems = computed(() => {
-  return tm('sections.education.items') || {}
+  const items = tm('sections.education.items')
+  console.log('Education items:', items) // Debug log
+  
+  if (!items || typeof items !== 'object') {
+    return []
+  }
+  
+  return Array.isArray(items) ? items : Object.values(items)
 })
 
 const parseMarkdown = (text) => {

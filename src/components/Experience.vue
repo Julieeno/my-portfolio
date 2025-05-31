@@ -45,7 +45,14 @@ const props = defineProps({
 const { t, tm } = useI18n()
 
 const experienceItems = computed(() => {
-  return tm('sections.experience.items') || {}
+  const items = tm('sections.experience.items')
+  console.log('Experience items:', items) // Debug log
+  
+  if (!items || typeof items !== 'object') {
+    return []
+  }
+  
+  return Array.isArray(items) ? items : Object.values(items)
 })
 
 const parseMarkdown = (text) => {
