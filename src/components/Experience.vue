@@ -4,13 +4,13 @@
       <div v-for="(item, key) in experienceItems" :key="key"
         :class="{'highlight-match': searchActive && isItemMatched(item)}"
         class="section-content">
-        <h3 class="text-lg font-semibold text-sage-800 dark:text-sage-200">
+        <h3 class="text-lg font-semibold text-sage-600 dark:text-sage-200">
           {{ item.title }}
         </h3>
-        <p class="text-sm text-sage-600 dark:text-sage-400 mb-1">
+        <p class="text-sm text-sage-700 dark:text-sage-400 mb-1">
           {{ item.company }} — {{ item.year }}
         </p>
-        <p class="text-sage-700 dark:text-sage-300 mt-2">
+        <p class="text-sage-800 dark:text-sage-300 mt-2">
           {{ item.description }}
         </p>
         <div class="mt-3 flex flex-wrap gap-2">

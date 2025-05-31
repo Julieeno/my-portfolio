@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-sage-50 dark:bg-sage-950">
+  <div class="min-h-screen bg-gradient-to-br from-sage-300 via-sage-200 to-sage-50 dark:from-sage-950 dark:via-sage-900 dark:to-sage-750">
     <div class="fixed top-0 right-0 z-50 p-4 flex items-center gap-3">
       <button
           @click="toggleTheme"
@@ -27,7 +27,7 @@
           />
         </button>
         <div v-if="isLanguageMenuOpen"
-             class="absolute right-0 mt-2 w-40 rounded-lg bg-white dark:bg-sage-800 shadow-lg border border-sage-200 dark:border-sage-700 py-1">
+             class="absolute right-0 mt-2 w-40 rounded-lg bg-sage-100 dark:bg-sage-800 shadow-lg border border-sage-200 dark:border-sage-700 py-1">
           <button
               v-for="(lang, code) in languages"
               :key="code"
@@ -90,7 +90,7 @@
             <div class="w-full max-w-7xl flex gap-24 px-4">
               <aside class="w-[450px] fixed top-32 flex flex-col h-[calc(100vh-8rem)]">
                 <div class="flex-1">
-                  <h1 class="text-5xl font-bold mb-6 text-sage-900 dark:text-sage-50">
+                  <h1 class="text-5xl font-bold mb-6 text-sage-600 dark:text-sage-50">
                     {{ t('title') }}
                   </h1>
 
@@ -120,7 +120,7 @@
                 <div class="mb-12 pb-8">
                   <div class="flex items-center justify-start gap-8">
                     <a
-                        href="mailto:giuliano@giuliano.com"
+                        href="mailto:giulianolazzara@gmail.com"
                         class="contact-icon"
                         aria-label="Email">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -129,7 +129,7 @@
                       </svg>
                     </a>
                     <a
-                        href="https://github.com/giuliano"
+                        href="https://github.com/Julieeno"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="contact-icon"
@@ -140,7 +140,7 @@
                       </svg>
                     </a>
                     <a
-                        href="https://linkedin.com/in/giuliano"
+                        href="https://www.linkedin.com/in/giuliano-lazzara/"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="contact-icon"
@@ -326,7 +326,7 @@ aside.fixed {
 
 .control-button {
   @apply h-10 px-3 rounded-lg
-  bg-white/80 dark:bg-sage-800/80
+  bg-sage-100 dark:bg-sage-800/80
   hover:bg-white dark:hover:bg-sage-700
   text-sage-800 dark:text-sage-200
   transition-colors duration-200

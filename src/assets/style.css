@@ -93,7 +93,7 @@
 
   .input {
     @apply px-3 py-2 rounded-lg border border-sage-300 dark:border-sage-600 
-           bg-white dark:bg-sage-800 
+           bg-sage-100 dark:bg-sage-800
            text-sage-900 dark:text-sage-100
            focus:ring-2 focus:ring-sage-500 dark:focus:ring-sage-400 
            focus:border-sage-500 dark:focus:border-sage-400
