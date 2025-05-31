@@ -66,7 +66,7 @@
                 :class="{ 'active': currentSection === section }"
                 @click="scrollToSection($event, section)"
             >
-              {{ t(`nav.${section}`) }}
+              {{ navItems[section] }}
             </a>
           </nav>
         </aside>
