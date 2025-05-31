@@ -2,7 +2,7 @@
   <section id="about" class="section-container">
     <div class="section-content">
       <p class="text-secondary">
-        {{ t('sections.about.content') }}
+        {{ aboutContent }}
       </p>
       <div class="tag-container--compact">
         <span v-for="skill in skills" :key="skill" class="tag-pill">
@@ -19,9 +19,8 @@ import { useI18n } from 'vue-i18n'
 
 const { t, tm } = useI18n()
 
-const skills = computed(() => {
-  const skillsData = tm('sections.about.skills')
-  console.log('Skills data:', skillsData)
-  return Array.isArray(skillsData) ? skillsData : []
+const aboutContent = computed(() => {
+  const sections = tm('sections')
+  return sections?.about?.content
 })
 </script>

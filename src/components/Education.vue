@@ -45,16 +45,15 @@ const props = defineProps({
 const { t, tm } = useI18n()
 
 const educationItems = computed(() => {
-  const items = tm('sections.education.items') ||
-                tm('education.items') || 
-                tm('education') || 
-                t('sections.education.items', {}, { returnObjects: true })
-  
-  console.log('Education items:', items)
-  
-  if (!items) return []
-  
-  return Array.isArray(items) ? items : Object.values(items)
+  const sections = tm('sections')
+
+  const items = sections?.education?.items
+
+  if (!items || typeof items !== 'object') {
+    return []
+  }
+
+  return Object.values(items)
 })
 
 const parseMarkdown = (text) => {

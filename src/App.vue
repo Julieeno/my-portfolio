@@ -112,7 +112,7 @@
                         :class="{ 'active': currentSection === section }"
                         @click="scrollToSection($event, section)"
                     >
-                      {{ t(`nav.${section}`) }}
+                      {{ navItems[section] }}
                     </a>
                   </nav>
                 </div>
@@ -183,7 +183,7 @@ import Education from './components/Education.vue'
 import Experience from './components/Experience.vue'
 import 'flag-icons/css/flag-icons.min.css'
 
-const {t, locale} = useI18n()
+const {t, locale, tm} = useI18n()
 const isLanguageMenuOpen = ref(false)
 
 const languages = {
@@ -200,6 +200,16 @@ const languages = {
     flag: 'es'
   },
 }
+
+const navItems = computed(() => {
+  const nav = tm('nav')
+  
+  if (!nav || typeof nav !== 'object') {
+    return {}
+  }
+  
+  return nav
+})
 
 const changeLanguage = (newLocale) => {
   i18nChangeLanguage(newLocale)

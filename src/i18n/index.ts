@@ -1,11 +1,35 @@
 import { createI18n } from 'vue-i18n'
 
 export const supported_lang = ['en', 'es', 'it'] as const
-const browser_lang = navigator.language.split('-')[0]
 
-let locale: 'en' | 'es' | 'it' = 'en'
-if (supported_lang.includes(browser_lang as any)) {
-  locale = browser_lang as 'en' | 'es' | 'it'
+const getBrowserLanguage = (): 'en' | 'es' | 'it' => {
+  if (typeof window === 'undefined' || typeof navigator === 'undefined') {
+    return 'en'
+  }
+
+  const browser_lang = navigator.language.split('-')[0]
+  if (supported_lang.includes(browser_lang as any)) {
+    return browser_lang as 'en' | 'es' | 'it'
+  }
+  return 'en'
+}
+
+const getSavedLanguage = (): 'en' | 'es' | 'it' | null => {
+  if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+    return null
+  }
+
+  const savedLanguage = localStorage.getItem('language')
+  if (savedLanguage && supported_lang.includes(savedLanguage as any)) {
+    return savedLanguage as 'en' | 'es' | 'it'
+  }
+  return null
+}
+
+const getInitialLocale = (): 'en' | 'es' | 'it' => {
+  const savedLanguage = getSavedLanguage()
+  if (savedLanguage) return savedLanguage
+  return getBrowserLanguage()
 }
 
 const messages = {
@@ -238,7 +262,7 @@ const messages = {
 
 const i18n = createI18n({
   legacy: false,
-  locale: locale,
+  locale: getInitialLocale(),
   fallbackLocale: 'en',
   messages
 })
@@ -246,13 +270,11 @@ const i18n = createI18n({
 export const changeLanguage = (newLocale: string) => {
   if (supported_lang.includes(newLocale as any)) {
     i18n.global.locale.value = newLocale as 'en' | 'es' | 'it'
-    localStorage.setItem('language', newLocale)
-  }
-}
 
-const savedLanguage = localStorage.getItem('language')
-if (savedLanguage && supported_lang.includes(savedLanguage as any)) {
-  i18n.global.locale.value = savedLanguage as 'en' | 'es' | 'it'
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      localStorage.setItem('language', newLocale)
+    }
+  }
 }
 
 export default i18n
