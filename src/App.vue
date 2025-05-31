@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-sage-300 via-sage-200 to-sage-50 dark:from-sage-950 dark:via-sage-900 dark:to-sage-750">
+  <div class="min-h-screen bg-gradient-to-br from-sage-300 via-sage-200 to-sage-100 dark:from-sage-950 dark:via-sage-900 dark:to-sage-700">
     <div class="fixed top-0 right-0 z-50 p-4 flex items-center gap-3">
       <button
           @click="toggleTheme"
@@ -17,24 +17,24 @@
         >
           <span
               :class="`fi fi-${languages[locale].flag}`"
+              class="flag-icon"
               role="img"
               :aria-label="languages[locale].name"
           ></span>
           <span class="text-sm hidden sm:inline">{{ languages[locale].name }}</span>
           <ChevronDownIcon
-              class="h-5 w-5"
-              :class="{ 'transform rotate-180': isLanguageMenuOpen }"
+              class="h-5 w-5 transform-rotate"
+              :class="{ 'rotate-180': isLanguageMenuOpen }"
           />
         </button>
-        <div v-if="isLanguageMenuOpen"
-             class="absolute right-0 mt-2 w-40 rounded-lg bg-sage-100 dark:bg-sage-800 shadow-lg border border-sage-200 dark:border-sage-700 py-1">
+        <div v-if="isLanguageMenuOpen" class="dropdown-menu">
           <button
               v-for="(lang, code) in languages"
               :key="code"
               @click="changeLanguage(code)"
-              class="w-full px-4 py-2 text-left hover:bg-sage-100 dark:hover:bg-sage-700 flex items-center gap-2"
+              class="dropdown-item"
           >
-            <span :class="`fi fi-${lang.flag}`"></span>
+            <span :class="`fi fi-${lang.flag}`" class="flag-icon"></span>
             {{ lang.name }}
           </button>
         </div>
@@ -42,9 +42,9 @@
     </div>
 
     <div class="min-h-screen pt-20">
-      <div class="lg:hidden px-4">
+      <div class="mobile-layout">
         <aside class="mb-8">
-          <h1 class="text-2xl font-bold mb-6 text-sage-900 dark:text-sage-50">
+          <h1 class="page-header--mobile">
             {{ t('title') }}
           </h1>
 
@@ -84,13 +84,13 @@
         </main>
       </div>
 
-      <div class="hidden lg:block">
-        <div class="container mx-auto">
+      <div class="desktop-layout">
+        <div class="container-custom mx-auto">
           <div class="flex justify-center">
             <div class="w-full max-w-7xl flex gap-24 px-4">
-              <aside class="w-[450px] fixed top-32 flex flex-col h-[calc(100vh-8rem)]">
+              <aside class="sidebar-fixed">
                 <div class="flex-1">
-                  <h1 class="text-5xl font-bold mb-6 text-sage-600 dark:text-sage-50">
+                  <h1 class="page-header">
                     {{ t('title') }}
                   </h1>
 
@@ -154,7 +154,7 @@
                 </div>
               </aside>
 
-              <main class="ml-[600px] w-[600px] space-y-16 py-8">
+              <main class="main-content">
                 <section id="about-desktop">
                   <About/>
                 </section>
@@ -261,298 +261,3 @@ const toggleTheme = () => {
   document.documentElement.classList.toggle('dark')
 }
 </script>
-
-<style>
-.container {
-  @apply w-full;
-  max-width: 1600px;
-}
-
-@media (min-width: 1024px) and (max-width: 1199px) {
-  aside.fixed {
-    width: 250px;
-  }
-
-  main {
-    margin-left: 340px !important;
-    width: 540px !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-.nav-link {
-  @apply transition-all duration-200;
-}
-
-@media (min-width: 1024px) and (max-width: 1199px) {
-  aside.fixed {
-    width: 250px;
-  }
-
-  main.ml-[300px] {
-    margin-left: 250px;
-    width: 600px;
-  }
-}
-
-.container {
-  @apply w-full;
-  max-width: 1280px;
-}
-
-aside.fixed {
-  max-width: calc((100vw - 640px - 4rem) / 2);
-}
-
-.transform {
-  @apply transition-transform duration-200;
-}
-
-@media (min-width: 1024px) {
-  .ml-64 {
-    margin-left: 16rem;
-  }
-}
-
-.fi {
-  @apply inline-block w-5 h-4 bg-contain bg-no-repeat align-middle;
-}
-
-.control-button {
-  @apply h-10 px-3 rounded-lg
-  bg-sage-100 dark:bg-sage-800/80
-  hover:bg-white dark:hover:bg-sage-700
-  text-sage-800 dark:text-sage-200
-  transition-colors duration-200
-  backdrop-filter backdrop-blur-sm
-  flex items-center;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.highlight-match {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-      90deg,
-      rgba(203, 211, 206, 0.15) 0%,
-      rgba(176, 189, 180, 0.25) 25%,
-      rgba(148, 166, 153, 0.3) 50%,
-      rgba(176, 189, 180, 0.25) 75%,
-      rgba(203, 211, 206, 0.15) 100%
-  );
-  background-size: 200% auto;
-  animation: sage-sparkle 5s ease-in-out infinite;
-  border: 2px solid rgba(148, 166, 153, 0.3);
-  box-shadow: 0 0 20px rgba(148, 166, 153, 0.3),
-  inset 0 0 20px rgba(176, 189, 180, 0.2);
-}
-
-@keyframes sage-sparkle {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.highlight-match::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-      35deg,
-      transparent 45%,
-      rgba(176, 189, 180, 0.5) 48%,
-      rgba(203, 211, 206, 0.8) 50%,
-      rgba(176, 189, 180, 0.5) 52%,
-      transparent 55%
-  );
-  animation: sage-shine 4s ease-in-out infinite;
-}
-
-@keyframes sage-shine {
-  0% {
-    transform: translateX(-100%) rotate(35deg);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.8;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(200%) rotate(35deg);
-    opacity: 0;
-  }
-}
-
-.dark .highlight-match {
-  background: linear-gradient(
-      90deg,
-      rgba(176, 189, 180, 0.2) 0%,
-      rgba(148, 166, 153, 0.3) 25%,
-      rgba(121, 143, 127, 0.35) 50%,
-      rgba(148, 166, 153, 0.3) 75%,
-      rgba(176, 189, 180, 0.2) 100%
-  );
-  border: 2px solid rgba(148, 166, 153, 0.4);
-  box-shadow: 0 0 20px rgba(148, 166, 153, 0.4),
-  inset 0 0 20px rgba(176, 189, 180, 0.3);
-}
-
-.dark .highlight-match::before {
-  background: linear-gradient(
-      35deg,
-      transparent 45%,
-      rgba(176, 189, 180, 0.6) 48%,
-      rgba(203, 211, 206, 0.9) 50%,
-      rgba(176, 189, 180, 0.6) 52%,
-      transparent 55%
-  );
-}
-
-.transition-theme {
-  @apply transition-all duration-200 ease-in-out;
-}
-
-.highlight-tag {
-  position: relative;
-  overflow: hidden;
-  animation: tag-pulse 1.8s ease-in-out infinite;
-  border: 2px solid rgba(148, 166, 153, 0.8) !important;
-  box-shadow: 0 0 15px rgba(148, 166, 153, 0.4),
-  inset 0 0 8px rgba(148, 166, 153, 0.3) !important;
-  transform-origin: center;
-  z-index: 1;
-}
-
-@keyframes tag-pulse {
-  0% {
-    transform: scale(1);
-    background-color: rgba(148, 166, 153, 0.3);
-  }
-  50% {
-    transform: scale(1.05);
-    background-color: rgba(148, 166, 153, 0.6);
-  }
-  100% {
-    transform: scale(1);
-    background-color: rgba(148, 166, 153, 0.3);
-  }
-}
-
-.highlight-tag::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-      35deg,
-      transparent 45%,
-      rgba(176, 189, 180, 0.5) 48%,
-      rgba(203, 211, 206, 0.8) 50%,
-      rgba(176, 189, 180, 0.5) 52%,
-      transparent 55%
-  );
-  animation: tag-shine 1.5s ease-in-out infinite;
-  z-index: 2;
-}
-
-@keyframes tag-shine {
-  0% {
-    transform: translateX(-100%) rotate(35deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%) rotate(35deg);
-    opacity: 0;
-  }
-}
-
-.dark .highlight-tag {
-  border: 2px solid rgba(176, 189, 180, 0.8) !important;
-  box-shadow: 0 0 15px rgba(176, 189, 180, 0.4),
-  inset 0 0 8px rgba(176, 189, 180, 0.3) !important;
-}
-
-.dark .highlight-tag::before {
-  background: linear-gradient(
-      35deg,
-      transparent 45%,
-      rgba(176, 189, 180, 0.5) 48%,
-      rgba(203, 211, 206, 0.8) 50%,
-      rgba(176, 189, 180, 0.5) 52%,
-      transparent 55%
-  );
-}
-
-@keyframes tag-dark-pulse {
-  0% {
-    background-color: rgba(176, 189, 180, 0.3);
-  }
-  50% {
-    background-color: rgba(176, 189, 180, 0.6);
-  }
-  100% {
-    background-color: rgba(176, 189, 180, 0.3);
-  }
-}
-
-.dark .highlight-tag {
-  animation: tag-dark-pulse 1.5s ease-in-out infinite;
-}
-
-.btn-secondary {
-  @apply px-3 py-2 rounded-lg
-  bg-white/80 dark:bg-sage-800/80
-  hover:bg-white dark:hover:bg-sage-700
-  text-sage-800 dark:text-sage-200
-  transition-colors duration-200
-  backdrop-filter backdrop-blur-sm;
-}
-
-#app {
-  @apply min-h-screen bg-sage-50 dark:bg-sage-950;
-}
-
-html, body {
-  @apply bg-sage-50 dark:bg-sage-950;
-}
-
-.nav-link {
-  @apply dark:text-sage-300 transition-colors;
-}
-
-.nav-link.active {
-  @apply text-sage-900 dark:text-sage-50 font-medium;
-}
-
-.contact-icon {
-  @apply text-sage-600 hover:text-sage-800 dark:text-sage-400 dark:hover:text-sage-200
-  transition-all duration-300 ease-in-out ;
-}
-
-.contact-icon svg {
-  @apply transform-gpu;
-  shape-rendering: geometricPrecision;
-}
-</style>

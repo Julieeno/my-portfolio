@@ -1,10 +1,10 @@
 <template>
   <section id="about" class="section-container">
     <div class="section-content">
-      <p class="text-sage-800 dark:text-sage-300">
+      <p class="text-secondary">
         {{ t('sections.about.content') }}
       </p>
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="tag-container--compact">
         <span v-for="skill in skills" :key="skill" class="tag-pill">
           {{ skill }}
         </span>

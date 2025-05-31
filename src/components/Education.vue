@@ -1,19 +1,19 @@
 <template>
   <section id="education" class="section-container">
-    <div class="space-y-6">
+    <div class="content-grid">
       <div v-for="(item, key) in educationItems" :key="key"
         :class="{'highlight-match': searchActive && isItemMatched(item)}"
-        class="section-content">
-        <h3 class="text-lg font-semibold text-sage-600 dark:text-sage-200">
+        class="experience-item">
+        <h3 class="experience-item__title">
           {{ item.title }}
         </h3>
-        <p class="text-sm text-sage-700 dark:text-sage-400 mb-1">
+        <p class="experience-item__meta">
           {{ item.institution }} — {{ item.year }}
         </p>
-        <p class="text-sage-800 dark:text-sage-300 mt-2">
+        <p class="experience-item__description">
           {{ item.description }}
         </p>
-        <div class="mt-3 flex flex-wrap gap-2">
+        <div class="tag-container">
           <span v-for="tag in item.tags" :key="tag"
                 :class="[
                   'tag-pill',
