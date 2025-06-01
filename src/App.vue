@@ -45,11 +45,19 @@
     <div class="min-h-screen pt-20">
       <div class="mobile-layout">
         <aside class="mb-8">
-          <h1 class="page-header--mobile">
-            Giuliano Lazzara
-          </h1>
+          <div class="mb-2">
+            <h1 class="page-header--mobile">
+              Giuliano Lazzara
+            </h1>
+            <p class="text-xl font-medium text-sage-800 dark:text-sage-200 mb-2">
+              {{ t('occupation') }}
+            </p>
+            <p class="text-secondary mb-2">
+              {{ t('heading') }}
+            </p>
+          </div>
 
-          <div class="relative mb-6">
+          <div class="relative mb-4">
             <input
                 type="text"
                 v-model="searchQuery"
@@ -126,11 +134,19 @@
             <div class="w-full max-w-7xl flex gap-24 px-4">
               <aside class="sidebar-fixed">
                 <div class="flex-1">
-                  <h1 class="page-header">
-                    Giuliano Lazzara
-                  </h1>
+                  <div class="mb-3">
+                    <h1 class="page-header">
+                      Giuliano Lazzara
+                    </h1>
+                    <p class="text-2xl font-medium text-sage-800 dark:text-sage-200 mb-2">
+                      {{ t('occupation') }}
+                    </p>
+                    <p class="text-secondary mb-2">
+                      {{ t('heading') }}
+                    </p>
+                  </div>
 
-                  <div class="relative mb-40">
+                  <div class="relative mb-20">
                     <input
                         type="text"
                         v-model="searchQuery"

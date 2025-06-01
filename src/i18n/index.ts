@@ -34,6 +34,8 @@ const getInitialLocale = (): 'en' | 'es' | 'it' => {
 
 const messages = {
     "en": {
+        "occupation": "Full-stack Developer and Software Engineer",
+        "heading": "ciao sono io se ci sei ancora batti un colpo ciao sono io se ci sei ancora batti un colpo ciao sono io se ci sei ancora batti un colpo",
         "searchPlaceholder": "Search technology...",
         "nav": {
             "about": "ABOUT",
@@ -108,6 +110,8 @@ const messages = {
         }
     },
     "es": {
+        "occupation": "Full-stack Developer and Software Engineer",
+        "heading": "ciao sono io se ci sei ancora batti un colpo",
         "searchPlaceholder": "Buscar tecnología...",
         "nav": {
             "about": "SOBRE MÍ",
@@ -182,6 +186,8 @@ const messages = {
         }
     },
     "it": {
+        "occupation": "Full-stack Developer and Software Engineer",
+        "heading": "ciao sono io se ci sei ancora batti un colpo",
         "searchPlaceholder": "Cerca tecnologia...",
         "nav": {
             "about": "CHI SONO",
