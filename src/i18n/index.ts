@@ -34,7 +34,6 @@ const getInitialLocale = (): 'en' | 'es' | 'it' => {
 
 const messages = {
     "en": {
-        "title": "Giuliano Lazzara",
         "searchPlaceholder": "Search technology...",
         "nav": {
             "about": "ABOUT",
@@ -109,7 +108,6 @@ const messages = {
         }
     },
     "es": {
-        "title": "Giuliano Lazzara",
         "searchPlaceholder": "Buscar tecnología...",
         "nav": {
             "about": "SOBRE MÍ",
@@ -184,7 +182,6 @@ const messages = {
         }
     },
     "it": {
-        "title": "Giuliano Lazzara",
         "searchPlaceholder": "Cerca tecnologia...",
         "nav": {
             "about": "CHI SONO",
