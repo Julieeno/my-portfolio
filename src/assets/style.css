@@ -23,7 +23,7 @@
   }
 
   .text-secondary {
-    @apply text-sage-700 dark:text-sage-300;
+    @apply text-sage-700 dark:text-sage-300 text-base;
   }
 
   .text-muted {
@@ -71,45 +71,43 @@
   }
   
   .nav-link {
-    @apply block text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-300 text-sm font-medium;
-    @apply transition-all duration-300 ease-out relative;
-    @apply dark:text-sage-300 transition-colors;
-    margin-left: 80px;
+    @apply block text-sage-600 dark:text-sage-400 text-sm font-medium relative;
+    @apply transition-all duration-500 ease-out;
+    padding: 12px 0;
+    padding-left: 80px;
   }
 
   .nav-link::before {
     content: '';
-    @apply absolute top-1/2 -translate-y-1/2;
-    @apply bg-sage-600 dark:bg-sage-400;
-    @apply transition-all duration-300 ease-out;
-    height: 2px;
+    @apply absolute top-1/2 -translate-y-1/2 bg-sage-600 dark:bg-sage-400;
+    @apply transition-all duration-500 ease-out;
+    height: 1px;
     width: 60px;
-    left: -70px;
+    left: 0;
   }
 
-  .nav-link:hover {
-    margin-left: 110px;
+  .nav-link:hover:not(.active) {
+    @apply text-sage-800 dark:text-sage-300;
+    padding-left: 100px;
   }
 
-  .nav-link:hover::before {
-    width: 90px;
+  .nav-link:hover:not(.active)::before {
+    width: 80px;
     @apply bg-sage-800 dark:bg-sage-300;
-    left: -100px;
   }
 
   .nav-link.active {
-    @apply text-sage-900 dark:text-sage-100 font-medium;
-    margin-left: 110px;
+    @apply text-sage-900 dark:text-sage-100 font-semibold;
+    padding-left: 130px;
   }
 
   .nav-link.active::before {
-    width: 90px;
+    width: 110px;
     @apply bg-sage-900 dark:bg-sage-100;
-    left: -100px;
   }
 
   .tag-pill {
-    @apply bg-sage-100 dark:bg-sage-700 text-sage-700 dark:text-sage-200 text-xs px-2 py-0.5 rounded-full;
+    @apply bg-sage-100 dark:bg-sage-700 text-sage-700 dark:text-sage-200 text-sm px-2 py-0.5 rounded-full;
   }
 
   .link {
@@ -175,19 +173,71 @@
   }
 
   .experience-item {
-    @apply section-content;
+    @apply section-content cursor-pointer;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .experience-item:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(148, 166, 153, 0.08) 0%,
+      rgba(176, 189, 180, 0.12) 50%,
+      rgba(203, 211, 206, 0.08) 100%
+    );
+  }
+
+  .dark .experience-item:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(176, 189, 180, 0.12) 0%,
+      rgba(148, 166, 153, 0.16) 50%,
+      rgba(121, 143, 127, 0.12) 100%
+    );
+  }
+
+  .experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(148, 166, 153, 0.1),
+      transparent
+    );
+    pointer-events: none;
+  }
+
+
+
+  .dark .experience-item::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(176, 189, 180, 0.15),
+      transparent
+    );
   }
 
   .experience-item__title {
-    @apply text-lg font-semibold text-sage-600 dark:text-sage-200;
+    @apply text-xl font-semibold text-sage-600 dark:text-sage-200;
+  }
+
+  .experience-item:hover .experience-item__title {
+    @apply text-sage-700 dark:text-sage-100;
   }
 
   .experience-item__meta {
-    @apply text-sm text-sage-700 dark:text-sage-400 mb-1;
+    @apply text-base text-sage-700 dark:text-sage-400 mb-1;
   }
 
   .experience-item__description {
-    @apply text-sage-800 dark:text-sage-300 mt-2;
+    @apply text-sage-800 dark:text-sage-300 mt-2 text-base;
   }
 
   .divider {
@@ -216,7 +266,7 @@
   }
 
   .main-content {
-    @apply ml-[600px] w-[600px] space-y-16 py-8;
+    @apply ml-[600px] w-[700px] space-y-16 py-8;
   }
 
   .mobile-layout {
@@ -231,6 +281,7 @@
 .highlight-match {
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
   background: linear-gradient(
       90deg,
       rgba(203, 211, 206, 0.15) 0%,
@@ -440,7 +491,7 @@
 
   .main-content {
     margin-left: 340px !important;
-    width: 540px !important;
+    width: 600px !important;
   }
 }
 

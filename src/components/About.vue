@@ -4,11 +4,6 @@
       <p class="text-secondary">
         {{ aboutContent }}
       </p>
-      <div class="tag-container--compact">
-        <span v-for="skill in skills" :key="skill" class="tag-pill">
-          {{ skill }}
-        </span>
-      </div>
     </div>
   </section>
 </template>
