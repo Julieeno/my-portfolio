@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="section-container">
     <div class="section-content">
-      <p class="text-secondary">
+      <p class="text-secondary whitespace-pre-line">
         {{ aboutContent }}
       </p>
     </div>

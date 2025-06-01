@@ -23,6 +23,17 @@
           </span>
         </div>
       </div>
+      <div class="flex justify-center mt-8">
+        <a href="https://drive.google.com/file/d/1-3uJw6IVzXK_O08lYJxoiDs3sgZsi59p/view?usp=sharing"
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-200 font-medium transition-colors">
+          {{ cvButtonText }}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -54,6 +65,16 @@ const educationItems = computed(() => {
   }
 
   return Object.values(items)
+})
+
+const cvLink = computed(() => {
+  const sections = tm('sections')
+  return sections?.education?.cvLink || 'https://drive.google.com/file/d/YOUR_CV_FILE_ID/view'
+})
+
+const cvButtonText = computed(() => {
+  const sections = tm('sections')
+  return sections?.education?.cvButtonText || 'View CV'
 })
 
 const parseMarkdown = (text) => {
