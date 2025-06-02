@@ -56,21 +56,21 @@ const messages = {
                         "institution": "University of Minnesota via [Coursera](https://www.coursera.org/)",
                         "year": "Feb 2025",
                         "description": "This course provided an introduction to key software testing concepts, including test case design, test automation, and defect detection. It helped me build a deeper understanding of how to ensure software reliability and quality throughout the development lifecycle. [View credential](https://www.coursera.org/account/accomplishments/verify/I6FY31KY628G)",
-                        "tags": ["Software Testing", "Quality Assurance", "Coursera"]
+                        "tags": ["JUnit", "JaCoCo", "Eclipse", "Mockito", "Black/White Box Testing"]
                     },
                     "certificate1": {
                         "title": "BSc in Computer Science",
                         "institution": "[University of Catania](https://www.unict.it/en) – [Department of Mathematics and Computer Science](https://web.dmi.unict.it/en)",
                         "year": "2017 – 2022",
                         "description": "I completed my Bachelor's studies, where I developed a strong interest in programming and learned the fundamentals of software development. Here it is possible to find my training path with the relevant [study plan](https://drive.google.com/file/d/1Ba2nP0jmu24l6Ig46W_l9mU97wanaKK4/view) for each subject.",
-                        "tags": ["AI", "NLP", "Computer Science"]
+                        "tags": ["C++", "C", "Java", "Python", "PHP", "Docker", "Red-Black Trees", "Binary Trees", "Unidirectional Graphs", "Directed Graphs", "NLP", "Adjacency Matrix", "Adjacency List", "Heap", "Hash Tables", "Sorting Algorithms", "Probability", "Statistics", "Discrete Mathematics", "Machine Learning", "Computer Graphics", "Software Engineering", "REST APIs"]
                     },
                     "certificate2": {
                         "title": "Erasmus Semester",
                         "institution": "[University of Groningen (Top 100 University)](https://www.rug.nl/)",
                         "year": "Jan 2020 – July 2020",
                         "description": "I spent a semester abroad through the Erasmus+ program, an enriching experience that allowed me to study in an international environment, improve my language skills, and broaden my academic and cultural perspective.",
-                        "tags": ["Exchange Program", "International Experience", "Computer Science"]
+                        "tags": ["AI", "ProLog", "Python", "Linear Algebra", "Calculus", "Cognitive Psychology", "MatLab"]
                     }
                 }
             },
@@ -82,21 +82,21 @@ const messages = {
                         "company": "[PPK Innovation](https://ppkinnovation.com/)",
                         "year": "Jan 2025 – Present",
                         "description": "I focus on designing and building dynamic, user-focused software solutions that meet evolving business needs. My work spans backend and frontend development, database integration, and application deployment using AWS services, with an emphasis on performance, reliability, and clean, maintainable code.",
-                        "tags": ["Full-stack", "JavaScript", "Backend", "Frontend", "Databases"]
+                        "tags": ["Python", "JavaScript", "TypeScript", "OpenSearch", "HTML", "CSS", "Vue 2", "Vue 3", "Tailwind CSS", "Vuetify", "SQL", "PostgreSQL", "Redis", "Databases", "Liquibase", "AWS", "S3", "Lambda", "API Gateway", "CloudWatch", "Docker", "Git", "GitHub", "Jenkis", "CI/CD"]
                     },
                     "job1": {
                         "title": "Full-stack Developer and Software Engineer",
                         "company": "[Skillbill s.r.l. | Skill Matters](https://www.skillbill.it/)",
                         "year": "Mar 2023 – Present",
                         "description": "I contribute to the development of multiple projects in parallel, building scalable and intuitive web applications using modern technologies, frameworks, and database systems. I take part in the full software development lifecycle, including design, implementation, and deployment to cloud systems like AWS Cloud. Working closely with a cross-functional team, I help deliver reliable, high-quality solutions aligned with business goals.",
-                        "tags": ["Full-stack", "JavaScript", "Backend", "Frontend", "Databases"]
+                        "tags": ["JavaScript", "Python", "SQL", "PostgreSQL", "Databases", "Liquibase", "TypeScript", "Redis", "AWS", "Jenkis", "Vue 2", "Vue 3", "Tailwind CSS", "Docker", "Git", "GitHub", "Vuetify", "CloudWatch", "S3", "Lambda", "API Gateway", "CI/CD", "HTML", "CSS", "OpenSearch"]
                     },
                     "job2": {
                         "title": "Internship Trainee",
                         "company": "[AUDIAS](https://audias.ii.uam.es/) at [Universidad Autónoma De Madrid](https://www.uam.es/uam/inicio)",
                         "year": "Jan 2022 – May 2022",
                         "description": "Worked on developing a speech processing system using deep learning, focusing on applying variational Bayes HMM over x-vectors for speaker diarization. Gained hands-on experience with PyTorch and machine learning pipelines.",
-                        "tags": ["Speech Processing", "Deep Learning", "PyTorch", "NLP"]
+                        "tags": ["Speech Processing", "Deep Learning", "PyTorch", "NLP", "Pearl", "VBx", "HMM", "Speaker Diarization", "kaldi"]
                     }
                 }
             },
@@ -121,7 +121,7 @@ const messages = {
                         "description": "A responsive portfolio website built with Vue.js and Tailwind CSS. Exactly what you are looking at right now!",
                         "documentLink": null,
                         "githubLink": "https://github.com/Julieeno/my-portfolio",
-                        "tags": ["Vue.js", "TypeScript", "Tailwind CSS", "i18n"]
+                        "tags": ["Vue.js", "TypeScript", "Tailwind CSS", "i18n", "Vite", "Vue 3"]
                     },
                     "project2": {
                         "name": "Conversational Agents and Their Impact",
@@ -129,7 +129,7 @@ const messages = {
                         "description": "My bachelor thesis that aims to propose conversational agents as tools to deal with mental issues like depression or anxiety problems, discussing their current state-of-the-art and people’s perception.",
                         "documentLink": "https://drive.google.com/file/d/1uMQcFwMVPFX8c6jBy4ccR_y-vUxl5Ch2/view",
                         "githubLink": null,
-                        "tags": ["Python", "PyTorch", "Deep Learning", "Speech Processing"]
+                        "tags": ["NPL", "Rasa", "Deep Learning", "Speech Processing", "Dialogflow"]
                     },
                     "project3": {
                         "name": "Stocks Analysis & Prediction",
@@ -137,7 +137,7 @@ const messages = {
                         "description": "A Dockerizing with the purpose to predict the prices of the stock market, considering their real prices.",
                         "documentLink": "https://drive.google.com/file/d/1OOZs_FtW55Df04YJST7rrgDUh3J57ZPv/view",
                         "githubLink": "https://github.com/Julieeno/Stock-Analysis-and-Prediction",
-                        "tags": ["AI", "NLP", "Research", "Mental Health"]
+                        "tags": ["Machine Learning", "Docker", "ElasticSearch", "Kafka", "Python", "Finnhub", "Logstash", "Apache", "Kibana", "PHP", "JavaScript", "Linear Regression"]
                     },
                     "project4": {
                         "name": "Song's Popularity",
@@ -145,7 +145,7 @@ const messages = {
                         "description": "This project aims to find the technical features of a song that could determine its popularity. Has been used the Spotify API to collect the data, and different typesm of Regressions to analyze these.",
                         "documentLink": "https://drive.google.com/file/d/1vpIf2ja3o9geU0bg_G_72i9QgvfSNXDN/view",
                         "githubLink": "https://github.com/Julieeno/Song-s-Popularity",
-                        "tags": ["React", "Node.js", "PostgreSQL", "Stripe", "Express"]
+                        "tags": ["Machine Learning", "Linear Regression", "Polynomial Regression", "Python"]
                     },
                     "project5": {
                         "name": "Cartesian Tree",
@@ -153,7 +153,7 @@ const messages = {
                         "description": "An essay where is discussed the data structure Cartesian Tree, illustrating its properties and the way to manage it.",
                         "documentLink": "https://drive.google.com/file/d/1zI0yfJgn3STWpigmjpdaMCmc7tICj0DV/view",
                         "githubLink": null,
-                        "tags": ["Vue.js", "D3.js", "JavaScript", "Charts", "Analytics"]
+                        "tags": ["Cartesian Tree", "C++"]
                     }
                 }
             }

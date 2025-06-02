@@ -51,7 +51,7 @@
   }
 
   .page-header--mobile {
-    @apply text-4xl font-bold mb-6 text-sage-900 dark:text-sage-50;
+    @apply text-3xl font-bold mb-6 text-sage-900 dark:text-sage-50;
   }
 
   .content-grid {
@@ -270,7 +270,7 @@
   }
 
   .mobile-layout {
-    @apply lg:hidden px-4;
+    @apply lg:hidden px-4 pb-16;
   }
 
   .desktop-layout {
