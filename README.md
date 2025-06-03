@@ -1,5 +1,19 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# My Personal Website 🌟
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Hey there! Welcome to my personal website project. This is where I showcase who I am, what I do, and share some cool stuff I've been working on.
+
+## What's This All About?
+
+This is my little corner of the internet. I wanted something fast, clean, and easy to maintain, so I went with Vue 3 and TypeScript. It's been a fun project to work on!
+
+## Tech Stack
+
+- **Vue 3** 
+- **TypeScript** 
+- **Vite** 
+- **Tailwind CSS** 
+- **Vue Router** 
+- **Vue i18n** 
+
+Feel free to check out the code and see how everything is put together. It's all open source, so you can use it as a starting point for your own projects.
