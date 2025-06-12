@@ -2,6 +2,7 @@
 # My Personal Website 🌟
 
 Hey there! Welcome to my personal website project. This is where I showcase who I am, what I do, and share some cool stuff I've been working on.
+[Give it a shot!](https://www.giulianolazzara.com/)
 
 ## What's This All About?
 
