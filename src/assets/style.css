@@ -263,6 +263,10 @@
 
   .sidebar-fixed {
     @apply w-[450px] fixed top-32 flex flex-col h-[calc(100vh-8rem)];
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 166, 153, 0) transparent;
   }
 
   .main-content {
