@@ -38,6 +38,27 @@
             </svg>
             Code
           </a>
+          <button v-if="item.videoLink"
+             @click="openVideo(item)"
+             class="inline-flex items-center gap-1 text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-200 text-sm font-medium transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Video
+          </button>
+        </div>
+        
+        <div v-if="item.videoLink && selectedItem === item" class="video-preview-container mb-4 cursor-pointer" @click="openVideo(item)">
+          <div class="relative rounded-lg overflow-hidden aspect-video bg-sage-100 dark:bg-sage-800">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 bg-sage-600 bg-opacity-75 rounded-full flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="tag-container">
           <span v-for="tag in item.tags" :key="tag"
@@ -59,12 +80,21 @@
         </router-link>
       </div>
     </div>
+    
+    <VideoPlayer
+      :is-open="videoPlayerOpen" 
+      :video-url="currentVideoUrl" 
+      :title="currentVideoTitle"
+      :description="currentVideoDescription"
+      @close="closeVideo" 
+    />
   </section>
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue'
+import { defineProps, computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import VideoPlayer from './VideoPlayer.vue'
 
 const props = defineProps({
   searchQuery: {
@@ -107,8 +137,34 @@ const matchesSearch = (tag) => {
   if (!props.searchQuery) return false
   return tag.toLowerCase().includes(props.searchQuery.toLowerCase())
 }
+
+const videoPlayerOpen = ref(false)
+const currentVideoUrl = ref('')
+const currentVideoTitle = ref('')
+const currentVideoDescription = ref('')
+const selectedItem = ref(null)
+
+const openVideo = (item) => {
+  if (item.videoLink) {
+    currentVideoUrl.value = item.videoLink
+    currentVideoTitle.value = item.name
+    currentVideoDescription.value = item.description
+    videoPlayerOpen.value = true
+  }
+}
+
+const closeVideo = () => {
+  videoPlayerOpen.value = false
+  currentVideoUrl.value = ''
+}
 </script>
 
 <style scoped>
+.video-preview-container {
+  transition: transform 0.2s ease-in-out;
+}
 
+.video-preview-container:hover {
+  transform: scale(1.02);
+}
 </style>

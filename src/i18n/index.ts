@@ -115,6 +115,15 @@ const messages = {
                     "links": "Links"
                 },
                 "items": {
+                    "project082025": {
+                        "name": "TOmaDO",
+                        "year": "2025",
+                        "description": "A minimalist task and time management application for Linux. It offers goal tracking, dashboards, a focus mode with timer, and productivity statistics.",
+                        "documentLink": null,
+                        "githubLink": "https://github.com/Julieeno/TOmaDO",
+                        "videoLink": "https://www.youtube.com/watch?v=FgrFFDZxTjs",
+                        "tags": ["C++", "CMake", "Qt", "SQLite"]
+                    },
                     "project1": {
                         "name": "Portfolio Website",
                         "year": "2025",
@@ -242,6 +251,15 @@ const messages = {
                     "links": "Enlaces"
                 },
                 "items": {
+                    "project082025": {
+                        "name": "TOmaDO",
+                        "year": "2025",
+                        "description": "Una aplicación minimalista de gestión de tareas y tiempo para Linux. Ofrece seguimiento de objetivos, paneles de control, un modo de concentración con temporizador y estadísticas de productividad.",
+                        "documentLink": null,
+                        "githubLink": "https://github.com/Julieeno/TOmaDO",
+                        "videoLink": "https://www.youtube.com/watch?v=FgrFFDZxTjs",
+                        "tags": ["C++", "CMake", "Qt", "SQLite"]
+                    },
                     "project1": {
                         "name": "Sitio Web Portfolio",
                         "year": "2025",
@@ -369,6 +387,15 @@ const messages = {
                     "links": "Collegamenti"
                 },
                 "items": {
+                    "project082025": {
+                        "name": "TOmaDO",
+                        "year": "2025",
+                        "description": "Un’applicazione minimalista per la gestione di compiti e del tempo su Linux. Offre monitoraggio degli obiettivi, dashboard, una modalità focus con timer e statistiche di produttività.",
+                        "documentLink": null,
+                        "githubLink": "https://github.com/Julieeno/TOmaDO",
+                        "videoLink": "https://www.youtube.com/watch?v=FgrFFDZxTjs",
+                        "tags": ["C++", "CMake", "Qt", "SQLite"]
+                    },
                     "project1": {
                         "name": "Sito Web Portfolio",
                         "year": "2025",
